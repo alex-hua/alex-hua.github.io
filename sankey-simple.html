@@ -1,0 +1,214 @@
+<!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=sankey-simple&code=PYBwLglsB2AEC8sDeAoWsDOBTAThLGAXMmurGAJ4hbEDkGAhtANZYW0A0p6ANgxcACuYOtBhZO3WFgC2IABYMMEIiTJkAZsADGg1bQYATAFYNtWaNvZSAvl3WGGYBsQDaU9KnXroDGTVhaQBS9QApXQHxDQFP3Wg9YOxivb3RffzoQwHYjQBkIwC45aMS4xITE5IDaQDDIwDW3QApYwHnE3O9870LvYroAVgBxQAB9QGdFOvUG9SafPxLAPvjqwAU0wHwEvrIBsiGyFsDADj1AeXlABnVZ9HnPGKSRukBmV0ApFW3Y-0b92GXaQC_1QE2vQHe5QB4Fc921RJvDwMBDu0B4Q0AZXrvS6Da63DqAYflANy2IPi4J-ZXKgBHIwBISnCCgiUoFAOqagARMwATfoB7rwxVy-32xtAAsgAlQBZ2oBZeVJYPJt3xxMAoBaAHgtmQssSUKjVue8pABdUGwHgQFiqdyY8kYIQ4cx0UKRSTk5w4ADmWBEfyBGq-ADcGDxBAFWjEPot0IrBMqxpMZhL1FrdfraADga6yKbzQEAMzW322zBKlWBU5GxLuvV0b0x7z-i3EAAcIfhCojJQ6PSTboYOvjBp91xTAQAjJn5V97Y7Upkcr70HHPYmW7AK8QAEw1sl1nN0QXVYWdtvDlHozvd2BWvKh671yO0dlEsfXCeBCpogt-s2puf9lmDh0rkcbzVFj1tdowvfoWfz-qL7Nnkpry9fLe0KGwmcHpax58m-DaBI8rwPuQ14lkiu4AQGxDBguWanmBSI1FBP47tO5aAcQz79K-aErtG44wZ6OFQbOAAswF7KBK55r05HFp6f7UfhsB0ShtaJMuTrTFhFG3veCGHjxL6ofxQ6rJswlsaJ_54YhsB9rxA4ye-jbZApN6BBx4lBvRnxaeha56bBhkqYehFzMRZkrhZrH6auhLrjyRkESZYYCXQtKMpZnqfp5NlARpJ6OQKVS1C5sEXqF5JPj5S6ydS9JMnFlExV-iTJXkYqkDYKA2AA3EAA
+	⚠ 请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
+-->
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.0/dist/echarts.min.js"></script>
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.0/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/china.js"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.0/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    option = {
+  series: {
+    type: 'sankey',
+    layout: 'none',
+    emphasis: {
+      focus: 'adjacency'
+    },
+    data: [
+      {
+        name: '应用感知'
+      },
+      {
+        name: '用户行为'
+      },
+      {
+        name: '覆盖质量'
+      },
+      {
+        name: '5G开关'
+      },
+      {
+        name: '达量限速'
+      },
+      {
+        name: '常住地'
+      },
+      {
+        name: '申告'
+      },
+      {
+        name: '基站价值'
+      },
+      {
+        name: '满意度'
+      },
+      {
+        name: '5G促活'
+      },
+      {
+        name: '覆盖规划'
+      },
+      {
+        name: '套餐终端'
+      },
+      {
+        name: 'MR定位'
+      },
+      {
+        name: '套餐终端栅格'
+      },
+      {
+        name: '覆盖质量栅格'
+      }
+    ],
+    links: [
+      {
+        source: '应用感知',
+        target: '满意度',
+        value: 5
+      },
+      {
+        source: '达量限速',
+        target: '满意度',
+        value: 3
+      },
+      {
+        source: '申告',
+        target: '满意度',
+        value: 8
+      },
+      {
+        source: '5G开关',
+        target: '满意度',
+        value: 1
+      },
+      {
+        source: '用户行为',
+        target: '满意度',
+        value: 2
+      },
+      {
+        source: '覆盖质量栅格',
+        target: '覆盖规划',
+        value: 5
+      },
+      {
+        source: '套餐终端栅格',
+        target: '覆盖规划',
+        value: 5
+      },
+      {
+        source: '覆盖质量栅格',
+        target: '5G促活',
+        value: 5
+      },
+      {
+        source: '套餐终端栅格',
+        target: '5G促活',
+        value: 5
+      },
+      {
+        source: '基站价值',
+        target: '覆盖规划',
+        value: 3
+      },
+      {
+        source: '覆盖质量',
+        target: '覆盖规划',
+        value: 5
+      },
+      {
+        source: '申告',
+        target: '覆盖规划',
+        value: 4
+      },
+      {
+        source: '5G开关',
+        target: '5G促活',
+        value: 4
+      },
+      {
+        source: '达量限速',
+        target: '5G促活',
+        value: 4
+      },
+      {
+        source: '常住地',
+        target: '5G促活',
+        value: 2
+      },
+      {
+        source: '用户行为',
+        target: '5G促活',
+        value: 3
+      },
+      {
+        source: '套餐终端',
+        target: '5G促活',
+        value: 5
+      },
+      {
+        source: '套餐终端',
+        target: '套餐终端栅格',
+        value: 5
+      },
+      {
+        source: 'MR定位',
+        target: '套餐终端栅格',
+        value: 5
+      },
+      {
+        source: '覆盖质量',
+        target: '覆盖质量栅格',
+        value: 5
+      },
+      {
+        source: 'MR定位',
+        target: '覆盖质量栅格',
+        value: 5
+      }
+    ]
+  }
+};
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>
