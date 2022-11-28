@@ -145,7 +145,16 @@
 		},
 		{
 			"id": "16",
-			"name": "天馈障碍派单",
+			"name": "天馈障碍派单过滤",
+			"symbolSize": 50,
+			"x": 350,
+			"y": 100,
+			"value": 0.1,
+			"category": 0
+		},
+		{
+			"id": "17",
+			"name": "天馈障碍派单流程",
 			"symbolSize": 50,
 			"x": 350,
 			"y": 100,
@@ -220,6 +229,14 @@
 		{
 			"source": "11",
 			"target": "16",
+			"lineStyle": {
+				"width": 5,
+				"curveness": 0.2
+			}
+		},
+		{
+			"source": "16",
+			"target": "17",
 			"lineStyle": {
 				"width": 5,
 				"curveness": 0.2
