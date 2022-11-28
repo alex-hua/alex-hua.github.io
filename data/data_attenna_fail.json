@@ -187,7 +187,11 @@
 		},
 		{
 			"source": "2",
-			"target": "11"
+			"target": "11",
+          lineStyle: {
+            width: 5,
+            curveness: 0.2
+          }
 		},
 		{
 			"source": "10",
@@ -211,7 +215,11 @@
 		},
 		{
 			"source": "11",
-			"target": "16"
+			"target": "16",
+          lineStyle: {
+            width: 5,
+            curveness: 0.2
+          }
 		}
 	],
 	"categories": [{
