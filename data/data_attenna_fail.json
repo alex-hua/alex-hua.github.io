@@ -20,8 +20,8 @@
 		{
 			"id": "2",
 			"name": "天馈障碍问题点",
-			"symbolSize": 30,
-			"x": 200,
+			"symbolSize": 50,
+			"x": 50,
 			"y": 100,
 			"value": 0.1,
 			"category": 0
@@ -101,8 +101,8 @@
 		{
 			"id": "11",
 			"name": "优先级过滤",
-			"symbolSize": 30,
-			"x": 300,
+			"symbolSize": 50,
+			"x": 200,
 			"y": 100,
 			"value": 4,
 			"category": 0
@@ -146,8 +146,8 @@
 		{
 			"id": "16",
 			"name": "天馈障碍派单",
-			"symbolSize": 30,
-			"x": 400,
+			"symbolSize": 50,
+			"x": 350,
 			"y": 100,
 			"value": 0.1,
 			"category": 0
@@ -176,6 +176,10 @@
 		{
 			"source": "6",
 			"target": "7"
+		},
+		{
+			"source": "7",
+			"target": "8"
 		},
 		{
 			"source": "8",
