@@ -1,0 +1,103 @@
+<!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=graph-label-overlap&code=LYTwwgFghgTgLgOgM4QPYHcAyqoBMCWAdgOYAUAlANwBQAJAsQKZwBSAygPIBypA5BHDgAHJAC4A9OKgAbRgA8AtBACuUBvjgqARgnypxuKHCgGjUAPpG4jQoQsAzKPmkIAVklSFeAGgAE95UIAYzg9Ql9SYhgoIQhyXwBval9fUEhYRAh8XEZsPCIyKmTfVCFQz18AXkTilLhUVGlQoVFEgF9vWt9ZJkJcVoBtLpSklLGxw2NWqJiIBCCjRmJUGHxGJARgGNIA4PLw0ih40fHTmGZlGHC1O2BGGlOxtvJh3zaugF1O8aRGVfXBq8To9boxWrxAJSagH6_QA5aYBYj0AgraAaC8fK86iAhGDfLwZrFUY8UtIoCBUMo4OD7Csgox8QTJlBptFYghCKgckhvgTpEQANZiXy4ubcwh8zmPBbWZb_fmC-aLKVrDlo3wwHDAVpwGDKRhi05ErSMaStYEElAYDVanXKlJCVBIDRhcGrYgCWkE_wrLaCP7ghJaNq8ZUdZWMXBMNggYBaRqDXhBfAwIKyHzY2Cq9C8L7K_WGzDE0nkmrulJZHIcABufyJLV8mu1Qd1PwWskw-GAGmN1tSRFaAAYEAAWRunLZyVoAJgb2aIjDYcBAsk7xd8QUaK3BHku1LdBKCl0rhHW_P7AGYp-7GMBYlB7fyTY9KXv-bw8K4oNTgiAd49hbP54ui2XXx0GyTRWgARl7Lt3ndYN3UpRMsXvM5GCEZRpHtTwIPHXsoNg14YLGD5ijaB5UnAaB4GQZgODKMJSFKfYimeSggA
+	⚠ 请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
+-->
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/jquery"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.0/dist/echarts.min.js"></script>
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.0/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/china.js"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.0/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    myChart.showLoading();
+$.getJSON('https://alex-hua.github.io/data/data_attenna_fail.json', function (graph) {
+  myChart.hideLoading();
+  option = {
+    tooltip: {},
+    legend: [
+      {
+        data: graph.categories.map(function (a) {
+          return a.name;
+        })
+      }
+    ],
+    series: [
+      {
+        name: '天线障碍流程',
+        type: 'graph',
+        layout: 'force',
+        data: graph.nodes,
+        links: graph.links,
+        categories: graph.categories,
+        roam: true,
+        label: {
+          show: true,
+          position: 'right',
+          formatter: '{b}'
+        },
+        edgeSymbol: ['circle', 'arrow'],
+        labelLayout: {
+          hideOverlap: true
+        },
+        scaleLimit: {
+          min: 0.4,
+          max: 2
+        },
+        lineStyle: {
+          color: 'source',
+          curveness: 0.3
+        },
+        emphasis: {
+          focus: 'adjacency',
+          lineStyle: {
+            width: 10
+          }
+        },
+        force: {
+          repulsion: 1200
+        }
+      }
+    ]
+  };
+  myChart.setOption(option);
+});
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>
