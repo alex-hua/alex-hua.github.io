@@ -23,7 +23,7 @@
 			"symbolSize": 30,
 			"x": -212.76357,
 			"y": 245.29176,
-			"value": 9.485714,
+			"value": 0.1,
 			"category": 0
 		},
 		{
@@ -211,26 +211,6 @@
 		},
 		{
 			"source": "11",
-			"target": "16"
-		},
-		{
-			"source": "13",
-			"target": "11"
-		},
-		{
-			"source": "14",
-			"target": "11"
-		},
-		{
-			"source": "15",
-			"target": "11"
-		},
-		{
-			"source": "17",
-			"target": "16"
-		},
-		{
-			"source": "18",
 			"target": "16"
 		}
 	],
