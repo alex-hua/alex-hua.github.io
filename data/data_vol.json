@@ -1,51 +1,48 @@
 {
-  "name": "大数据",
-  "size": 17,
-  "children": [
-            {
-              "name": "B域",
-              "size": 17,
-              "children": [
-                {
-                  "name": "计费话单",
-                  "size": 15,
-                  "value": 15
-                },
-                {
-                  "name": "CRM",
-                  "size": 1,
-                  "value": 1
-                },
-                {
-                  "name": "BSS",
-                  "size": 1,
-                  "value": 1
-                }
-                ],
-              "value": 17
-            },
-            {
-              "name": "O域",
-              "size": 17,
-              "children": [
-                {
-                  "name": "计费话单",
-                  "size": 15,
-                  "value": 15
-                },
-                {
-                  "name": "CRM",
-                  "size": 1,
-                  "value": 1
-                },
-                {
-                  "name": "BSS",
-                  "size": 1,
-                  "value": 1
-                }
-                ],
-              "value": 17
-            }
-    ],
-  "value": 34
+	"name": "大数据",
+	"size": 17,
+	"children": [{
+			"name": "B域",
+			"size": 17,
+			"children": [{
+					"name": "计费话单",
+					"size": 15,
+					"value": 15
+				},
+				{
+					"name": "CRM",
+					"size": 1,
+					"value": 1
+				},
+				{
+					"name": "BSS",
+					"size": 1,
+					"value": 1
+				}
+			],
+			"value": 17
+		},
+		{
+			"name": "O域",
+			"size": 17,
+			"children": [{
+					"name": "计费话单",
+					"size": 15,
+					"value": 15
+				},
+				{
+					"name": "CRM",
+					"size": 1,
+					"value": 1
+				},
+				{
+					"name": "BSS",
+					"size": 1,
+					"value": 1
+				}
+			],
+			"value": 17
+		}
+	],
+	"value": 34
 }
