@@ -10,7 +10,7 @@
 			"name": "O域",
 			"size": 17,
 			"children": [{
-				"name": "无线",
+				"name": "O域/无线",
 				"size": 15,
 				"children": [{
 						"name": "2/3G",
@@ -80,7 +80,7 @@
 			"value": 17
 		},
 		{
-			"name": "核心网",
+			"name": "O域/核心网",
 			"size": 5.1,
 			"children": [{
 					"name": "DNS",
@@ -101,7 +101,7 @@
 			"value": 5.1
 		},
 		{
-			"name": "传输",
+			"name": "O域/传输",
 			"size": 2,
 			"value": 2
 		}
