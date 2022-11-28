@@ -1,96 +1,139 @@
 {
 	"name": "大数据",
-	"size": 17,
+	"size": 117.3,
 	"children": [{
 			"name": "B域",
-			"size": 2.5,
-			"value": 2.5
+			"size": 35,
+			"children": [{
+					"name": "计费话单",
+					"size": 11,
+					"value": 11
+				},
+				{
+					"name": "CRM",
+					"size": 2,
+					"value": 2
+				},
+				{
+					"name": "BSS",
+					"size": 2,
+					"value": 2
+				},
+				{
+					"name": "B域标签",
+					"size": 20,
+					"value": 20
+				}
+			],
+			"value": 35
 		},
 		{
-			"name": "O域",
-			"size": 17,
+			"name": "M域",
+			"size": 1.5,
+			"value": 1.5
+		},
+		{
+			"name": "O域/无线",
+			"size": 56.7,
 			"children": [{
-				"name": "O域/无线",
-				"size": 15,
-				"children": [{
-						"name": "2/3G",
-						"size": 5,
-						"value": 5
-					},
-					{
-						"name": "4G",
-						"size": 1,
-						"children": [{
-								"name": "4G/MR",
-								"size": 1.5,
-								"value": 1.5
-							},
-							{
-								"name": "4G/CDR",
-								"size": 4,
-								"value": 4
-							},
-							{
-								"name": "4G/DPI",
-								"size": 15,
-								"value": 15
-							},
-							{
-								"name": "4G/性能",
-								"size": 1,
-								"value": 1
-							},
-							{
-								"name": "4G/配置",
-								"size": 0.7,
-								"value": 0.7
-							}
-						],
-						"value": 33.5
-					},
-					{
-						"name": "5G",
-						"size": 15,
-						"children": [{
-								"name": "5G/MR",
-								"size": 1.8,
-								"value": 1.8
-							},
-							{
-								"name": "5G/DPI",
-								"size": 15,
-								"value": 15
-							},
-							{
-								"name": "5G/性能",
-								"size": 0.8,
-								"value": 0.8
-							},
-							{
-								"name": "5G/配置",
-								"size": 0.5,
-								"value": 0.5
-							}
-						],
-						"value": 18.5
-					}
-				],
-				"value": 15
-			}],
-			"value": 17
+					"name": "2/3G",
+					"size": 5,
+					"value": 5
+				},
+				{
+					"name": "4G",
+					"size": 21.7,
+					"children": [{
+							"name": "4G/MR",
+							"size": 1.5,
+							"value": 1.5
+						},
+						{
+							"name": "4G/CDR",
+							"size": 4,
+							"value": 4
+						},
+						{
+							"name": "4G/DPI",
+							"size": 14.5,
+							"children": [{
+									"name": "4G/DPI信令面",
+									"size": 6,
+									"value": 6
+								},
+								{
+									"name": "4G/DPI用户面",
+									"size": 8.5,
+									"value": 8.5
+								}
+							],
+							"value": 14.5
+						},
+						{
+							"name": "4G/性能",
+							"size": 1,
+							"value": 1
+						},
+						{
+							"name": "4G/配置",
+							"size": 0.7,
+							"value": 0.7
+						}
+					],
+					"value": 21.7
+				},
+				{
+					"name": "5G",
+					"size": 30,
+					"children": [{
+							"name": "5G/MR",
+							"size": 1.8,
+							"value": 1.8
+						},
+						{
+							"name": "5G/DPI",
+							"size": 27,
+							"children": [{
+									"name": "5G/DPI信令面",
+									"size": 10,
+									"value": 10
+								},
+								{
+									"name": "5G/DPI用户面",
+									"size": 17,
+									"value": 17
+								}
+							],
+							"value": 27
+						},
+						{
+							"name": "5G/性能",
+							"size": 0.7,
+							"value": 0.7
+						},
+						{
+							"name": "5G/配置",
+							"size": 0.5,
+							"value": 0.5
+						}
+					],
+					"value": 30
+				}
+			],
+			"value": 56.7
 		},
 		{
 			"name": "O域/核心网",
-			"size": 5.1,
+			"size": 22.1,
 			"children": [{
 					"name": "DNS",
-					"size": 3,
-					"value": 3
+					"size": 17,
+					"value": 17
 				},
 				{
 					"name": "AMF/MME日志",
-					"size": 2,
-					"value": 2
+					"size": 5,
+					"value": 5
 				},
 				{
 					"name": "性能",
@@ -98,7 +141,7 @@
 					"value": 0.1
 				}
 			],
-			"value": 5.1
+			"value": 22.1
 		},
 		{
 			"name": "O域/传输",
@@ -106,5 +149,5 @@
 			"value": 2
 		}
 	],
-	"value": 34
+	"value": 117.3
 }
