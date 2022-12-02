@@ -1,7 +1,7 @@
 {
 	"nodes": [{
 			"id": "0",
-			"name": "MDT/MR",
+			"name": "MDT",
 			"symbolSize": 15,
 			"x": -266.82776,
 			"y": 299.6904,
@@ -169,6 +169,15 @@
 			"y": 100,
 			"value": 0.7,
 			"category": 1
+		},
+		{
+			"id": "19",
+			"name": "MR",
+			"symbolSize": 10,
+			"x": 350,
+			"y": 100,
+			"value": 0.7,
+			"category": 1
 		}
 	],
 	"links": [{
@@ -196,7 +205,7 @@
 			"target": "7"
 		},
 		{
-			"source": "0",
+			"source": "19",
 			"target": "18"
 		},
 		{
